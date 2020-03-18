@@ -2,23 +2,14 @@ import java.util.ArrayList;
 
 public class Gugudan {
 	
-	public static ArrayList<Integer> calculate(int num){
+	public static ArrayList<Integer> calculate(int first, int second){
 		
-		return calculate(0);
-	}
-	public static int[] dan(int num) {
-		int[] dan = new int[19];
-		for(int i=0;i<num;i++) {
-			dan[i] = num*(i+1);
+		ArrayList<Integer> calculate = new ArrayList<>();
+		for(int i=2;i<first+1;i++) {
+			for(int j=1;j<second+1;j++) {
+				calculate.add(i*j);
+			}
 		}
-		return dan;
+		return calculate;
 	}
-	
-	public static void print(int[] dan,int num) {
-		for(int i=0;i<num;i++) {
-			System.out.println(num+"*"+(i+1)+"="+dan[i]);
-		}
-		System.out.println();
-	}
-	
 }
